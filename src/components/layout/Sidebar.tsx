@@ -4,6 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { Box, LogOut, Snowflake } from "lucide-react";
 import { useSidebarViewModel } from "@/viewmodels/useSidebarViewModel";
+import Image from "next/image";
 
 export default function Sidebar() {
     const vm = useSidebarViewModel();
@@ -12,12 +13,8 @@ export default function Sidebar() {
         <aside className="flex h-screen w-56 shrink-0 flex-col bg-black-primary text-btn-hide">
             {/* Logo */}
             <div className="flex items-center gap-3 px-4 py-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                    <img
-                        src="/public/logo.svg"
-                        alt="ThienTam WMS"
-                        className="h-6 w-6"
-                    />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white">
+                    <Image src="/logo.svg" alt="ThienTam WMS" width={24} height={24} />
                 </div>
                 <div className="leading-tight">
                     <p className="font-bold text-text-btn-selected">ThienTam WMS</p>
