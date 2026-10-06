@@ -21,7 +21,7 @@ export function useLoginViewModel() {
       const res = await authService.login({ username, password });
       tokenStorage.set(res.accessToken);
       setUser(res.user);
-      router.replace("/hang-hoa");
+      router.replace("/dashboard");
     } catch (e: any) {
       setError(e.response?.data?.message ?? "Đăng nhập thất bại");
     } finally {
